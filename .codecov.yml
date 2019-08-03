@@ -2,4 +2,3 @@ comment: 'off'
 ignore:
     - src/*/Tests/
     - src/*/Resources/
-    - src/Domain/Infra/DependencyInjection/*Helper.php
