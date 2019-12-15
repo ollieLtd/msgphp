@@ -2,7 +2,7 @@ ifndef PHP
 	PHP=7.2
 endif
 ifndef PHPUNIT
-	PHPUNIT=8.2
+	PHPUNIT=8
 endif
 
 qa_image=jakzal/phpqa:php${PHP}-alpine
@@ -38,7 +38,7 @@ phpunit-coverage:
 	${qa} bin/package-exec phpdbg -qrr /tools/simple-phpunit ${phpunit_args} --coverage-clover=coverage.xml
 phpunit-pull:
 	rm -rf var/phpunit
-	${qa} sh -c "cp -RL /tools/.composer/vendor-bin/symfony/vendor/bin/.phpunit/phpunit-${PHPUNIT} var/phpunit"
+	${qa} sh -c "cp -RL /tools/.composer/vendor-bin/symfony/vendor/bin/.phpunit/phpunit-${PHPUNIT}-0 var/phpunit"
 
 # code style
 cs:
