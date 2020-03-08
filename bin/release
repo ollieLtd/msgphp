@@ -3,7 +3,7 @@
 source bin/.bashrc
 [[ $# -ne 1 ]] && label "Usage: $0 <type>" ko && exit 1
 
-git_clean
+#git_clean
 
 [[ -f var/.env ]] && source var/.env
 base_uri="https://github.com/msgphp"
@@ -57,6 +57,7 @@ changelog() {
     local next_version=${3:?missing next version} && [[ ${next_version} == v* ]] && next_version=${next_version:1}
     local filename="CHANGELOG-"$(branch_alias "${next_version}")".md"
 
+    [[ "${next_version}" == 0.* ]] && filename="CHANGELOG-1.0-dev.md"
     [[ ! -d "var/changelog/${branch}" ]] && mkdir -p "var/changelog/${branch}"
     [[ -d ../../var/changelog ]] && cp -R ../../var/changelog var/
 
@@ -133,7 +134,7 @@ if [[ $? -eq 1 ]]; then
     [[ $? -ne 0 ]] && label "Failed" ko && exit 1
 fi
 
-confirm "Continue release?"
+confirm "Continue $1 release?"
 [[ $? -ne 1 ]] && label "Aborted" ok && exit 0
 
 label "Synchronizing source"
