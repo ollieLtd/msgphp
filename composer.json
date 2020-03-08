@@ -4,11 +4,11 @@
     "require": {
         "doctrine/doctrine-bundle": "^2.0",
         "doctrine/orm": "^2.7",
-        "elasticsearch/elasticsearch": "^7.4",
+        "elasticsearch/elasticsearch": "^7.6",
         "lexik/jwt-authentication-bundle": "^2.6",
         "psr/container": "^1.0",
         "ramsey/uuid": "^3.9",
-        "ramsey/uuid-doctrine": "^1.5",
+        "ramsey/uuid-doctrine": "^1.6",
         "ro0nl/link": "^1.0",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/config": "^5.0",
