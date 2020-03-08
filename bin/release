@@ -171,11 +171,13 @@ major|minor)
         fi
     fi
 
-    confirm "Create release branch ${branch}?"
-    release_branch=$?
-    if [[ ${release_branch} -eq 1 ]]; then
-        git checkout --quiet -b "${branch}"
-        [[ $? -ne 0 ]] && label "Failed" ko && restore && exit 1
+    if [[ "${branch}" != 0.* ]]; then
+        confirm "Create release branch ${branch}?"
+        release_branch=$?
+        if [[ ${release_branch} -eq 1 ]]; then
+            git checkout --quiet -b "${branch}"
+            [[ $? -ne 0 ]] && label "Failed" ko && restore && exit 1
+        fi;
     fi;
 
     confirm "Tag version?" yes
