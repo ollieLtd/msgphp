@@ -49,10 +49,10 @@ cs-fix:
 # static analysis
 psalm: install phpunit-pull
 	mkdir -p src/Domain/vendor
-	${qa} psalm --show-info=false
+	${qa} psalm --find-unused-psalm-suppress --show-info=false
 psalm-info: install phpunit-pull
 	mkdir -p src/Domain/vendor
-	${qa} psalm --show-info=true
+	${qa} psalm --find-unused-psalm-suppress --show-info=true
 
 # docs
 docs-serve:
