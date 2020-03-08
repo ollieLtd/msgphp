@@ -18,8 +18,8 @@
     </projectFiles>
 
     <issueHandlers>
-        <!-- info = conventional, suppress = false positive -->
         <DeprecatedClass errorLevel="info"/>
+        <DeprecatedConstant errorLevel="info"/>
         <DeprecatedMethod errorLevel="info"/>
         <InternalMethod>
             <errorLevel type="suppress">
