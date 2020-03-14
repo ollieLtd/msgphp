@@ -3,7 +3,7 @@
 source bin/.bashrc
 [[ $# -ne 1 ]] && label "Usage: $0 <type>" ko && exit 1
 
-#git_clean
+git_clean
 
 [[ -f var/.env ]] && source var/.env
 base_uri="https://github.com/msgphp"
