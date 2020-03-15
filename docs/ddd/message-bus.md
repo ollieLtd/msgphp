@@ -21,11 +21,9 @@ Dispatches the given message object.
 
 ## Implementations
 
-### `MsgPhp\Domain\Infrastructure\Messenger\DomainMessageBus`
+### Infrastructural
 
-A Symfony Messenger tailored domain message bus.
-
-- [Read more](../infrastructure/symfony-messenger.md#domain-message-bus)
+- [Symfony Messenger](../infrastructure/symfony-messenger.md#domain-message-bus)
 
 [domain-specific language]: https://en.wikipedia.org/wiki/Domain-specific_languages
 [PHP callable]: https://www.php.net/manual/en/language.types.callable.php

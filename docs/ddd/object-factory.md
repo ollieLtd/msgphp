@@ -90,11 +90,9 @@ $object = $factory->reference(Subject::class);
 !!! note
     `GenericDomainObjectFactory::reference()` requires [symfony/var-exporter]
 
-### `MsgPhp\Domain\Infrastructure\Doctrine\DomainObjectFactory`
+### Infrastructural
 
-A Doctrine tailored object factory.
-
-- [Read more](../infrastructure/doctrine-orm.md#domain-object-factory)
+- [Doctrine ORM](../infrastructure/doctrine-orm.md#domain-object-factory)
 
 [constructor]: https://secure.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor
 [symfony/var-exporter]: https://packagist.org/packages/symfony/var-exporter

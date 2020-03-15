@@ -24,27 +24,6 @@ value indicates the document was actually deleted yes or no.
 
 ## Implementations
 
-### `MsgPhp\Domain\Infrastructure\Elasticsearch\ProjectionRepository`
+### Infrastructural
 
-An Elasticsearch tailored projection repository.
-
-- [Read more](../infrastructure/elasticsearch.md#projection-repository)
-
-## Basic example
-
-```php
-<?php
-
-use MsgPhp\Domain\Projection\ProjectionRepository;
-
-// USAGE
-
-/** @var ProjectionRepository $repository */
-
-$document = $repository->find('my_projection', 'ID');
-
-if (null === $document) {
-    $document = ['id' => 'ID', 'some_field' => 'value'];
-    $repository->save('my_projection', $document);
-}
-```
+- [Elasticsearch](../infrastructure/elasticsearch.md#projection-repository)

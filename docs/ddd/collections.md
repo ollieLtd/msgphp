@@ -133,11 +133,9 @@ $firstTwoIntsPlussed = $firstTwoInts->map(function (int $value): int {
 
 A first-class citizen paginated domain collection compatible with any `iterable` value.
 
-### `MsgPhp\Domain\Infrastructure\Doctrine\DomainCollection`
+### Infrastructural
 
-A Doctrine tailored domain collection.
-
-- [Read more](../infrastructure/doctrine-collections.md#domain-collection)
+- [Doctrine Collection](../infrastructure/doctrine-collections.md#domain-collection)
 
 [traversable]: https://secure.php.net/traversable
 [countable]: https://secure.php.net/countable

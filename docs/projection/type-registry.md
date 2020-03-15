@@ -16,23 +16,6 @@ Destroys the registry and thus requires to be re-initialized after.
 
 ## Implementations
 
-### `MsgPhp\Domain\Infrastructure\Elasticsearch\ProjectionTypeRegistry`
+### Infrastructural
 
-An Elasticsearch tailored projection type registry.
-
-- [Read more](../infrastructure/elasticsearch.md#projection-type-registry)
-
-## Basic example
-
-```php
-<?php
-
-use MsgPhp\Domain\Projection\ProjectionTypeRegistry;
-
-// USAGE
-
-/** @var ProjectionTypeRegistry $typeRegistry */
-
-$typeRegistry->destroy();
-$typeRegistry->initialize();
-```
+- [Elasticsearch](../infrastructure/elasticsearch.md#projection-type-registry)

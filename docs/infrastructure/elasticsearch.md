@@ -36,6 +36,11 @@ $typeRegistry = new ProjectionTypeRegistry($client, 'app_dev-', [
         ],
     ],
 ]);
+
+// USAGE
+
+$typeRegistry->destroy();
+$typeRegistry->initialize();
 ```
 
 ## Projection Repository
@@ -60,6 +65,15 @@ use MsgPhp\Domain\Infrastructure\Elasticsearch\ProjectionRepository;
 /** @var Client $client */
 
 $repository = new ProjectionRepository($client, 'app_dev-');
+
+// USAGE
+
+$document = $repository->find('my_projection', 'ID');
+
+if (null === $document) {
+    $document = ['id' => 'ID', 'some_field' => 'value'];
+    $repository->save('my_projection', $document);
+}
 ```
 
 [elasticsearch-project]: https://www.elastic.co/guide/en/elasticsearch/client/php-api/current/index.html
