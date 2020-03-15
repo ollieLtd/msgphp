@@ -10,62 +10,42 @@ primitive iterable value. It may hold any type of element values.
 - [`\Countable`][countable]
 - [`\IteratorAggregate`][iterator-aggregate]
 
----
-
 ### `static fromValue(?iterable $value): DomainCollection`
 
 Returns a factorized collection from any primitive iterable. Using `null` implies an empty collection.
-
----
 
 ### `isEmpty(): bool`
 
 Tells if a collection is considered empty, i.e. contains zero elements.
 
----
-
 ### `contains(mixed $element): bool`
 
 Tells if a collection contains the given element. Comparison is done strictly.
-
----
 
 ### `containsKey(string|int $key): bool`
 
 Tells if a collection contains an element at the given key.
 
----
-
 ### `first(): mixed`
 
 Returns the first element from a collection.
-
----
 
 ### `last(): mixed`
 
 Returns the last element from a collection.
 
----
-
 ### `get(string|int $key): mixed`
 
 Returns the element at the given key from a collection.
-
----
 
 ### `filter(callable $filter): DomainCollection`
 
 Returns a **new** collection containing only elements for which `$filter` returns `true`. Keys are preserved.
 
----
-
 ### `slice(int $offset, int $limit = 0): DomainCollection`
 
 Returns a **new** collection containing a slice of elements. By default the slice has no limit, implied by integer `0`.
 Keys are preserved.
-
----
 
 ### `map(callable $mapper): DomainCollection`
 
@@ -80,31 +60,21 @@ is to expose the current pagination.
 
 - [`DomainCollection`](#collections)
 
----
-
 ### `getOffset(): float`
 
 Get the current page offset.
-
----
 
 ### `getLimit(): float`
 
 Get the current page limit (e.g. items per page).
 
----
-
 ### `getCurrentPage(): float`
 
 Get the current page number.
 
----
-
 ### `getLastPage(): float`
 
 Get the last page number.
-
----
 
 ### `getTotalCount(): float`
 
@@ -126,11 +96,11 @@ A first-class citizen domain collection compatible with any `iterable` value.
 
 use MsgPhp\Domain\GenericDomainCollection;
 
-// --- SETUP ---
+// SETUP
 
 $collection = new GenericDomainCollection(['a', 'b', 'c', 1, 2, 3, 'key' => 'value']);
 
-// --- USAGE ---
+// USAGE
 
 $collection->isEmpty(); // false
 count($collection); // int(7)

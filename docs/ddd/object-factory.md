@@ -9,8 +9,6 @@ object based on a given class name and context.
 
 Returns a factorized domain object by class name. Optionally a context can be provided for the factory to act upon.
 
----
-
 ### `reference(string $class, array $context = []): object`
 
 Returns a factorized domain reference object by class name. Optionally a context can be provided for the factory to act
@@ -18,8 +16,6 @@ upon.
 
 !!! info
     Factorizing a reference should not trigger its [constructor] to be called, nor trigger any form of external loading
-
----
 
 ### `getClass(string $class, array $context = []): string`
 
@@ -44,7 +40,7 @@ To map interfaces and abstract classes to concrete classes a global class mappin
 
 use MsgPhp\Domain\Factory\GenericDomainObjectFactory;
 
-// --- SETUP ---
+// SETUP
 
 interface Known
 {
@@ -71,7 +67,7 @@ $factory = new GenericDomainObjectFactory([
 // Optionally set the factory to use for nested objects, or use the current factory by default.
 // $factory->setNestedFactory(...);
 
-// --- USAGE ---
+// USAGE
 
 /** @var Some $object */
 $object = $factory->create(Known::class, ['a' => 1]);

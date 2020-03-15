@@ -19,7 +19,7 @@ use MsgPhp\Domain\Projection\ProjectionRepository;
 use MsgPhp\Domain\Projection\ProjectionSynchronization;
 use MsgPhp\Domain\Projection\ProjectionTypeRegistry;
 
-// --- SETUP ---
+// SETUP
 
 class MyEntity
 {
@@ -40,7 +40,7 @@ $provider = new ProjectionDocumentProvider([
 });
 $synchronization = new ProjectionSynchronization($typeRegistry, $repository, $provider);
 
-// --- USAGE ---
+// USAGE
 
 $numProjections = $synchronization->synchronize();
 ```

@@ -25,7 +25,7 @@ Use entity features to provide _write operations_ for common entity fields. Buil
 use MsgPhp\Domain\Model\CreatedAtField;
 use MsgPhp\Domain\Model\CanBeEnabled;
 
-// --- SETUP ---
+// SETUP
 
 class MyEntity
 {
@@ -38,7 +38,7 @@ class MyEntity
     }
 }
 
-// --- USAGE ---
+// USAGE
 
 $entity = new MyEntity();
 $createdAt = $entity->getCreatedAt();

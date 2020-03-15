@@ -17,7 +17,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping as ORM;
 use MsgPhp\Domain\Infrastructure\Doctrine\DomainEntityRepositoryTrait;
 
-// --- SETUP ---
+// SETUP
 
 /**
  * @ORM\Entity()
@@ -45,7 +45,7 @@ class MyEntityRepository
 
 $repository = new MyEntityRepository(MyEntity::class, $em);
 
-// --- USAGE ---
+// USAGE
 
 if ($repository->exists($id = ['name' => '...', 'year' => date('Y')])) {
     $entity = $repository->find($id);
@@ -75,7 +75,7 @@ use Doctrine\ORM\Mapping as ORM;
 use MsgPhp\Domain\Factory\DomainObjectFactory as BaseDomainObjectFactory;
 use MsgPhp\Domain\Infrastructure\Doctrine\DomainObjectFactory;
 
-// --- SETUP ---
+// SETUP
 
 /**
  * @ORM\Entity()
@@ -103,7 +103,7 @@ class MyOtherEntity extends MyEntity
 
 $factory = new DomainObjectFactory(new BaseDomainObjectFactory(), $em);
 
-// --- USAGE ---
+// USAGE
 
 /** @var MyOtherEntity $otherEntity */
 $otherEntity = $factory->create(MyEntity::class, [
@@ -132,7 +132,7 @@ use Doctrine\ORM\Mapping as ORM;
 use MsgPhp\Domain\Infrastructure\Doctrine\Hydration\ScalarHydrator;
 use MsgPhp\Domain\Infrastructure\Doctrine\Hydration\SingleScalarHydrator;
 
-// --- SETUP ---
+// SETUP
 
 /**
  * @ORM\Entity()
@@ -157,7 +157,7 @@ $config = $em->getConfiguration();
 $config->addCustomHydrationMode(ScalarHydrator::NAME, ScalarHydrator::class);
 $config->addCustomHydrationMode(SingleScalarHydrator::NAME, SingleScalarHydrator::class);
 
-// --- USAGE ---
+// USAGE
 
 $query = $em->createQuery('SELECT entity.id FROM MyEntity entity');
 

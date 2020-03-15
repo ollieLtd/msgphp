@@ -32,12 +32,12 @@ use MsgPhp\Domain\Event\DomainEvent;
 use MsgPhp\Domain\Event\DomainEventHandler;
 use MsgPhp\Domain\Event\DomainEventHandlerTrait;
 
-// --- SETUP ---
+// SETUP
 
 class ChangeValue implements DomainEvent
 {
     public $newValue;
-    
+
     public function __construct($value)
     {
         $this->newValue = $value;
@@ -47,9 +47,9 @@ class ChangeValue implements DomainEvent
 class MyEntity implements DomainEventHandler
 {
     use DomainEventHandlerTrait;
-    
+
     public $value;
-    
+
     private function onChangeValueEvent(ChangeValue $event): bool
     {
         if ($this->value === $event->newValue) {
@@ -60,10 +60,9 @@ class MyEntity implements DomainEventHandler
 
         return true;
     }
-    
 }
 
-// --- USAGE ---
+// USAGE
 
 $entity = new MyEntity();
 

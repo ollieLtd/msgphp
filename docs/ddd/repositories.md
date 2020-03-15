@@ -11,46 +11,32 @@ This page describes the API provided by default [implementations](#implementatio
 
 Finds all entities available. An unlimited collection is implied by `$limit` set to zero.
 
----
-
 ### `doFindAllByFields(array $fields, int $offset = 0, int $limit = 0): DomainCollection`
 
-Finds all entities matching the specified fields. Supported field values should be `null`, `scalar`, `scalar[]` (i.e. 
+Finds all entities matching the specified fields. Supported field values should be `null`, `scalar`, `scalar[]` (i.e.
 one of) and `object` (i.e. another entity or its [identifier](identifiers.md)). An unlimited collection is implied by
 `$limit` set to zero.
 
----
-
 ### `doFind(mixed $id): object`
 
-Finds a single entity by its identity. Supported identity values should be `scalar`, `array` (for composite identifiers), 
+Finds a single entity by its identity. Supported identity values should be `scalar`, `array` (for composite identifiers),
 and `object` (i.e. another entity or its [identifier](identifiers.md)).
-
----
 
 ### `doFindByFields(array $fields): object`
 
 Finds the first entity matching the specified fields. See `doFindAllByFields()` for supported field values.
 
----
-
 ### `doExists(mixed $id): bool`
 
 Verifies if an entity exists by its identity. See `doFind()` for supported identity values.
-
----
 
 ### `doExistsByFields(array $fields): bool`
 
 Verifies if an entity matching the specified fields exists. See `doFindAllByFields()` for supported field values.
 
----
-
 ### `doSave(object $entity): void`
 
 Persists an entity into the identity map. The entity will be available on any subsequent query.
-
----
 
 ### `doDelete(object $entity): void`
 

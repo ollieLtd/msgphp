@@ -25,7 +25,7 @@ use MsgPhp\Domain\Event\Enable;
 use MsgPhp\Domain\Event\DomainEventHandler;
 use MsgPhp\Domain\Event\DomainEventHandlerTrait;
 
-// --- SETUP ---
+// SETUP
 
 class MyEntity implements DomainEventHandler
 {
@@ -33,7 +33,7 @@ class MyEntity implements DomainEventHandler
     use DomainEventHandlerTrait;
 }
 
-// --- USAGE ---
+// USAGE
 
 $entity = new MyEntity();
 $entity->isEnabled(); // false

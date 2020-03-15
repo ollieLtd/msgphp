@@ -16,7 +16,7 @@ A Doctrine tailored [domain collection](../ddd/collections.md) is provided by `M
 use Doctrine\Common\Collections\ArrayCollection;
 use MsgPhp\Domain\Infrastructure\Doctrine\DomainCollection;
 
-// --- SETUP ---
+// SETUP
 
 $collection = new DomainCollection(new ArrayCollection([1, 2, 3]));
 ```

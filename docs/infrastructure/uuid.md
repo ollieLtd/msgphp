@@ -17,7 +17,7 @@ use MsgPhp\Domain\DomainId;
 use MsgPhp\Domain\Infrastructure\Uuid\DomainIdTrait;
 use Ramsey\Uuid\Uuid;
 
-// --- SETUP ---
+// SETUP
 
 class MyDomainUuid implements DomainId
 {
@@ -26,7 +26,7 @@ class MyDomainUuid implements DomainId
 
 $id = new MyDomainUuid(); // a new UUID version 4 value
 $id = new MyDomainUuid(Uuid::uuid1());
-$id = new MyDomainUuid(Uuid::fromString('00000000-0000-0000-0000-000000000000')); 
+$id = new MyDomainUuid(Uuid::fromString('00000000-0000-0000-0000-000000000000'));
 ```
 
 [uuid]: https://en.wikipedia.org/wiki/Universally_unique_identifier

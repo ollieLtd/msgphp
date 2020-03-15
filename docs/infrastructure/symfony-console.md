@@ -30,8 +30,6 @@ is to (interactively) build a context array using the [CLI].
 Configures a command input definition. See also [`InputDefinition`][api-inputdefinition]. Should be called before using
 `getContext()`.
 
----
-
 #### `getContext(InputInterface $input, StyleInterface $io, array $values = []): array`
 
 Resolves the actual context from the console IO. See also [`InputInterface`][api-inputinterface] and [`StyleInterface`][api-styleinterface].
@@ -78,7 +76,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-// --- SETUP ---
+// SETUP
 
 class MyObject
 {
@@ -116,7 +114,7 @@ class MyCommand extends Command
     }
 }
 
-// --- USAGE ---
+// USAGE
 
 // $ bin/console my-command [--option=OPTION] [--] [<argument>]
 ```

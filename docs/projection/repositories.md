@@ -9,19 +9,13 @@ projection documents.
 
 Finds a single projection document by type and ID. In case the document cannot be found `null` should be returned.
 
----
-
 ### `save(string $type, array $document): void`
 
 Saves a projection document. The document will be available on any subsequent query.
 
----
-
 ### `saveAll(string $type, iterable<int, array> $documents): void`
 
 Saves all projection documents at once. The documents will be available on any subsequent query.
-
----
 
 ### `delete(string $type, string $id): bool`
 
@@ -43,7 +37,7 @@ An Elasticsearch tailored projection repository.
 
 use MsgPhp\Domain\Projection\ProjectionRepository;
 
-// --- USAGE ---
+// USAGE
 
 /** @var ProjectionRepository $repository */
 

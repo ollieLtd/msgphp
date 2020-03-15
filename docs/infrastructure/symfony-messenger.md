@@ -16,7 +16,7 @@ A Symfony Messenger tailored [domain message bus](../ddd/message-bus.md) is prov
 use MsgPhp\Domain\Infrastructure\Messenger\DomainMessageBus;
 use Symfony\Component\Messenger\MessageBusInterface;
 
-// --- SETUP ---
+// SETUP
 
 class CommandMessage
 {
@@ -31,7 +31,7 @@ class EventMessage
 
 $domainBus = new DomainMessageBus($commandBus, $eventBus, [EventMessage::class]);
 
-// --- USAGE ---
+// USAGE
 
 $domainBus->dispatch(new CommandMessage());
 $domainBus->dispatch(new EventMessage());

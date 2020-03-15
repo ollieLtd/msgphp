@@ -17,14 +17,14 @@ A translation between the database type and an [identifier](../ddd/identifiers.m
 use Doctrine\DBAL\Types\Type;
 use MsgPhp\Domain\Infrastructure\Doctrine\DomainIdType;
 
-// --- SETUP ---
+// SETUP
 
 class MyDomainIdType extends DomainIdType
 {
     public const NAME = 'my_domain_id';
 }
 
-// --- USAGE ---
+// USAGE
 
 MyDomainIdType::setClass(MyDomainId::class);
 MyDomainIdType::setDataType(Type::GUID);

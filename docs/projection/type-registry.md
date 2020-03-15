@@ -10,8 +10,6 @@ available [projection](models.md) type information.
 Initializes the registry. Usually needs to be called only once per environment, or after any type information has
 changed.
 
----
-
 ### `destroy(string ...$type): void`
 
 Destroys the registry and thus requires to be re-initialized after.
@@ -31,7 +29,7 @@ An Elasticsearch tailored projection type registry.
 
 use MsgPhp\Domain\Projection\ProjectionTypeRegistry;
 
-// --- USAGE ---
+// USAGE
 
 /** @var ProjectionTypeRegistry $typeRegistry */
 

@@ -24,7 +24,7 @@ It works directly with any [`Client`][api-client] and a known configuration of t
 use Elasticsearch\Client;
 use MsgPhp\Domain\Infrastructure\Elasticsearch\ProjectionTypeRegistry;
 
-// --- SETUP ---
+// SETUP
 
 /** @var Client $client */
 
@@ -55,7 +55,7 @@ It works directly with any [`Client`][api-client].
 use Elasticsearch\Client;
 use MsgPhp\Domain\Infrastructure\Elasticsearch\ProjectionRepository;
 
-// --- SETUP ---
+// SETUP
 
 /** @var Client $client */
 
