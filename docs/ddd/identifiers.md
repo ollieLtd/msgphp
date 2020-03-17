@@ -64,7 +64,7 @@ A decorating identifier to built custom/concrete identifiers upon.
 ```php
 <?php
 
-use MsgPhp\Domain\AbstractDomainId;use MsgPhp\Domain\DomainId;
+use MsgPhp\Domain\AbstractDomainId;
 
 // SETUP
 
