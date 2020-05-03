@@ -40,7 +40,7 @@ trait DomainEntityRepositoryTrait
 
     private function getAlias(): string
     {
-        return $this->alias ?? ($this->alias = strtolower((string) preg_replace(['/([A-Z]+)([A-Z][a-z])/', '/([a-z\d])([A-Z])/'], ['\\1_\\2', '\\1_\\2'], (string) (false === ($i = strrpos($this->class, '\\')) ? $this->class : substr($this->class, $i + 1)))));
+        return $this->alias ?? ($this->alias = strtolower((string)preg_replace(['/([A-Z]+)([A-Z][a-z])/', '/([a-z\d])([A-Z])/'], ['\\1_\\2', '\\1_\\2'], (string)(false === ($i = strrpos($this->class, '\\')) ? substr($this->class, 0, 1) : substr($this->class, $i + 1, 1)))));
     }
 
     /**
